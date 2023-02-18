@@ -1,0 +1,14 @@
+.container{
+	margin: 0 auto;
+	width: 150px;
+	height: 100px;
+	border-radius: 3px;
+}
+
+.block{
+	margin-bottom: 12px;
+}
+
+.error{
+	color: red;
+}

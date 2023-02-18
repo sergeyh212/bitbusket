@@ -1,0 +1,32 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"login": "sergey",
+			"password": "54606005545589ffb607bc7f9f90ce44e31d",
+			"email": "sergeyh212@gmail.com",
+			"name": "sergey"
+		},
+		{
+			"id": 2,
+			"login": "maksim",
+			"password": "246086a375aacb17606c185d31c8d3e320ce",
+			"email": "max123@gmail.com",
+			"name": "maksim"
+		},
+		{
+			"id": 3,
+			"login": "egor13",
+			"password": "1045b94782430384939d60b1255a4bef734d",
+			"email": "eGoR@gmail.com",
+			"name": "egor"
+		},
+		{
+			"id": 4,
+			"login": "sergey2",
+			"password": "7630c27f37ad3a0eff54517cc85c01d5e860",
+			"email": "sergeyh215@gmail.com",
+			"name": "sergey"
+		}
+	]
+}
