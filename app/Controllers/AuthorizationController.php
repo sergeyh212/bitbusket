@@ -1,20 +1,19 @@
 <?php
 
 
-if ($_COOKIE['auth'] == 'true' && $_POST['exit'] == 'false') {
+if (isset($_COOKIE['login']) && $_POST['exit'] == 'false') {
 	$data = json_encode([
 		'authorized' => 'true',
 		'login' => $_COOKIE['login'],
 	]);
-	
+
 	exit($data);
 } else {
-	setcookie('aut', 'false');
-	session_destroy();
+	setcookie('login', '', time() - 3600);
 
 	$data = json_encode([
 		'authorized' => 'false'
 	]);
-	
+
 	exit($data);
 }

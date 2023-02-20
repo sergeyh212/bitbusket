@@ -14,7 +14,6 @@ function authorization(exit = 0) {
 		})
 		.then((data) => {
 			console.log(data);
-			if (data['authorized'] == 'false')
 				authorized(data);
 		});
 }
