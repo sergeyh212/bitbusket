@@ -31,17 +31,17 @@ function getData() {
 	return data;
 };
 
-function errors(errors) {
-
-	if (errors['loginError'] != null || errors['passwordError'] != null)
-		document.getElementById('errors').innerHTML = 'Неправильный логин или пароль!';
-	else
+function errors(data) {
+	if (data['authorized'] === 'true')
 		document.getElementById('errors').innerHTML = ' ';
+
+	else
+		document.getElementById('errors').innerHTML = 'Неправильный логин или пароль!';
+
 };
 
 function authorized(data) {
 	if (data['authorized'] === 'true') {
-		console.log('You have seccessfuly authorized');
 		document.getElementById('form').hidden = true;
 
 		const cookie = document.cookie.split(';');

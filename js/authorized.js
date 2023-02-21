@@ -2,7 +2,7 @@ authorization();
 
 function authorization(exit = 0) {
 	let request = getExit(exit);
-	console.log(request);
+
 	fetch('/app/Controllers/AuthorizationController.php',
 		{
 			method: 'POST',
@@ -13,8 +13,7 @@ function authorization(exit = 0) {
 			return response.json();
 		})
 		.then((data) => {
-			console.log(data);
-				authorized(data);
+			authorized(data);
 		});
 }
 
@@ -23,7 +22,6 @@ function authorized(data) {
 		console.log('You have seccessfuly authorized');
 		document.getElementById('form').hidden = true;
 		document.getElementById('exit').hidden = false;
-
 		document.getElementById('user').innerHTML = 'Hello, ' + data['login'];
 	}
 }
@@ -31,7 +29,6 @@ function authorized(data) {
 exitHandler = () => {
 	document.getElementById('form').hidden = false;
 	document.getElementById('exit').hidden = true;
-
 	document.getElementById('user').innerHTML = ' ';
 
 	authorization(1);

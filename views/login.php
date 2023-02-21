@@ -36,6 +36,7 @@
 		<h1 id="user"></h1>
 		<button id="exit" onclick="exitHandler()" hidden>Выйти</button>
 	</div>
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 
 include('../Models/User.php');
 
-$user = new User($_POST['login'], $_POST['password'], $_POST['confirm_password'], $_POST['email'], $_POST['name']);
+$user = new User(htmlentities($_POST['login']), htmlentities($_POST['password']), htmlentities($_POST['confirm_password']), htmlentities($_POST['email']), htmlentities($_POST['name']));
 
 if ($user->isValid()) {
 

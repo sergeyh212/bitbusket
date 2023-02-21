@@ -32,7 +32,7 @@
 			</div>
 			<div class="block">
 				<label for="email">Email</label>
-				<input type="email" name="email" id="email">
+				<input type="text" name="email" id="email">
 				<span class="error" id="email_error"></span>
 			</div>
 			<div class="block">

@@ -2,15 +2,14 @@
 
 include('../Models/User.php');
 
-$user = new User($_POST['login'], $_POST['password'], null, null, 0);
+$user = new User(htmlentities($_POST['login']), htmlentities($_POST['password']), null, null, 0);
 
 if ($user->authorized()) {
-	session_start();
 	setcookie('login', $_POST['login']);
 
 	$data = json_encode([
 		'authorized' => 'true',
-		'login' => $_COOKIE['login']
+		'login' => $_POST['login'],
 	]);
 
 	exit($data);

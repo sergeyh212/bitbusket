@@ -14,8 +14,6 @@ $(document).ready(function () {
 				return response.json();
 			})
 			.then((data) => {
-				registered(data);
-
 				errors(data);
 			});
 	});
@@ -67,8 +65,3 @@ function errors(errors) {
 		document.getElementById('name_error').innerHTML = ' ';
 
 };
-
-function registered(data) {
-	if (data['registered'] === 'true')
-		console.log('You have seccessfuly registered');
-}
